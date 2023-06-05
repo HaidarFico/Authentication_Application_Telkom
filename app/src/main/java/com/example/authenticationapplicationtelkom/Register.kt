@@ -42,19 +42,13 @@ class Register : AppCompatActivity() {
         progressBar = findViewById(R.id.progressBar)
         textView = findViewById(R.id.loginNow)
 
-        textView.setOnClickListener(
-            View.OnClickListener {
-                fun onClick(view: View)
-                {
-                    intent = Intent(applicationContext, Login::class.java)
-                    startActivity(intent)
-                    finish()
-                }
-            }
-        )
+        textView.setOnClickListener{
+            var intent = Intent(applicationContext, Login::class.java)
+            startActivity(intent)
+            finish()
+        }
 
-        buttonReg.setOnClickListener(View.OnClickListener {
-            fun onClick(view: View){
+        buttonReg.setOnClickListener{
                 progressBar.visibility = View.VISIBLE
 
                 var email = editTextEmail.text.toString()
@@ -63,13 +57,11 @@ class Register : AppCompatActivity() {
                 if(TextUtils.isEmpty(email))
                 {
                     Toast.makeText(this@Register, "Enter Email", Toast.LENGTH_SHORT).show()
-                    return
                 }
 
                 if(TextUtils.isEmpty(password))
                 {
                     Toast.makeText(this@Register, "Enter Password", Toast.LENGTH_SHORT).show()
-                    return
                 }
 
                 mAuth.createUserWithEmailAndPassword(email, password)
@@ -90,7 +82,6 @@ class Register : AppCompatActivity() {
                     .addOnFailureListener {
                         Toast.makeText(this, "Error occurred ${it.localizedMessage}", Toast.LENGTH_SHORT).show()
                     }
-            }
-        })
+        }
     }
 }

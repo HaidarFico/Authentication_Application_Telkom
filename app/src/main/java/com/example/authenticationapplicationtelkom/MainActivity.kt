@@ -3,7 +3,6 @@ package com.example.authenticationapplicationtelkom
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
@@ -33,14 +32,11 @@ class MainActivity : AppCompatActivity() {
             textView.text = user.email
         }
 
-        button.setOnClickListener(View.OnClickListener {
-            fun onClick(view: View)
-            {
+        button.setOnClickListener{
                 FirebaseAuth.getInstance().signOut()
                 intent = Intent(applicationContext, Login::class.java)
                 startActivity(intent)
                 finish()
-            }
-        })
+        }
     }
 }
