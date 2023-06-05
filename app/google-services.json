@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "238464811197",
+    "project_id": "telkom-auth-app",
+    "storage_bucket": "telkom-auth-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:238464811197:android:aeb58ba7a84d8981c577d4",
+        "android_client_info": {
+          "package_name": "com.example.authenticationapplicationtelkom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "238464811197-05co86bcc2u45hfvbr7npub2cgmsfnk2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkfTyPiRMSUeSI2QPJ_zNzuk6xaVLI5LQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "238464811197-05co86bcc2u45hfvbr7npub2cgmsfnk2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
